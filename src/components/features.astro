@@ -1,0 +1,41 @@
+---
+const features = [
+  {
+    title: "Bla bla bla",
+    description:
+      "Bla bla bla Bla bla bla Bla bla bla Bla bla bla",
+  },
+  {
+    title: "Bla bla bla",
+    description:
+      "Bla bla bla Bla bla bla Bla bla bla Bla bla bla",
+  },
+  {
+    title: "Bla bla bla",
+    description:
+      "Bla bla bla Bla bla bla Bla bla bla Bla bla bla",
+  }
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Lorem ipsum dolor sit amet consectetur.
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aut.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-600 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

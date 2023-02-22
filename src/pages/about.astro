@@ -1,0 +1,27 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout title="Acerca de">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Acerca de</Fragment>
+      <Fragment slot="desc">Conoce mas de tu universidad.</Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <p class="text-lg leading-relaxed text-slate-600">
+        Este proyecto está destinado a que conozcas un poco más de tu
+        universidad. Puedes encontrar mucha <a
+          href="https://unab.edu.co/"
+          target="_blank"
+          rel="noopener"
+          class="hover:underline">
+          más información aquí
+        </a>.
+      </p>
+    </div>
+  </Container>
+</Layout>

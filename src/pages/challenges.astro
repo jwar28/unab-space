@@ -1,0 +1,68 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+const challenges = [
+  {
+    title: "Bla bla bla",
+    description: "Bla bla bla Bla bla bla Bla bla bla Bla bla bla",
+  },
+  {
+    title: "Bla bla bla",
+    description: "Bla bla bla Bla bla bla Bla bla bla Bla bla bla",
+  },
+  {
+    title: "Bla bla bla",
+    description: "Bla bla bla Bla bla bla Bla bla bla Bla bla bla",
+  },
+];
+---
+
+<Layout title="Retos de la U">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Retos de la U</Fragment>
+      <Fragment slot="desc">
+        Veremos algunos de los retos que afrontan la instituciones educativas y
+        como se podrian afrontar.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-10">
+      <div class="flex flex-col space-y-3">
+        <h2
+          class="font-bold text-2xl text-gray-700 text-center">
+          Obstáculos que impiden a las universidades cumplir sus misiones
+        </h2>
+        <p class="text-lg leading-relaxed text-slate-600">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
+          nostrum beatae accusantium dolorem a. Sunt tenetur iste dolores quod!
+          Sapiente!
+        </p>
+      </div>
+
+      <div class="flex flex-col space-y-5">
+        <h2
+          class="font-bold text-2xl text-gray-700 text-center">
+          Retos que debe emprender la universidad para cumplir su misión
+        </h2>
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-16">
+          {
+            challenges.map((item) => (
+              <div class="flex gap-4 items-start">
+                <div>
+                  <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+                  <p class="text-slate-600 mt-2 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>
