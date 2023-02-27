@@ -1,15 +1,39 @@
 ---
-import List from "./ui/list.vue";
-import { features } from "@content/_listContent";
+import Card from "./ui/card.astro";
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Lorem ipsum dolor sit amet consectetur.
+    ¿Qué encontraras en esta página?
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aut.
+  <p class="text-lg mt-6 text-slate-600 text-justify">
+    En esta página explicaremos cual es la misión de la universidad como
+    institución de educación superior y cuál es la función social que esta debe
+    cumplir, como se construye una educación holística y algunos obstáculos que
+    se presentan ante este objetivo. <br />Te invitamos a revisar las siguientes
+    secciones:
   </p>
 </div>
 
-<List arrayToDisplay={features} />
+<div class="flex flex-wrap justify-around gap-10 mt-10">
+  <Card imageUrl="/src/assets/image1.jpeg" pageLink="/education">
+    <Fragment slot="title">Educacion</Fragment>
+    <Fragment slot="desc">
+      Descubre como la universidad puede proporcionar una educación holística
+    </Fragment>
+  </Card>
+
+  <Card imageUrl="/src/assets/image2.jpg" pageLink="/mission">
+    <Fragment slot="title">Misión</Fragment>
+    <Fragment slot="desc">
+      Explora la función misional de la universidad y sus pilares fundamentales
+    </Fragment>
+  </Card>
+
+  <Card imageUrl="/src/assets/image3.jpg" pageLink="/challenges">
+    <Fragment slot="title">Retos de la U</Fragment>
+    <Fragment slot="desc">
+      Indaga sobre los retos de las universidades al intentar cumplir su misión
+    </Fragment>
+  </Card>
+</div>
