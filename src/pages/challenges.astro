@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import Divider from "@components/ui/divider.astro";
 
 const challenges = [
   {
@@ -29,10 +30,10 @@ const challenges = [
       </Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-10">
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-10 space-y-10">
+      <Divider />
       <div class="flex flex-col space-y-3">
-        <h2
-          class="font-bold text-2xl text-gray-700 text-center">
+        <h2 class="font-bold text-2xl text-gray-700 text-center">
           Obstáculos que impiden a las universidades cumplir sus misiones
         </h2>
         <p class="text-lg leading-relaxed text-slate-600">
@@ -42,9 +43,9 @@ const challenges = [
         </p>
       </div>
 
+      <Divider />
       <div class="flex flex-col space-y-5">
-        <h2
-          class="font-bold text-2xl text-gray-700 text-center">
+        <h2 class="font-bold text-2xl text-gray-700 text-center">
           Retos que debe emprender la universidad para cumplir su misión
         </h2>
 

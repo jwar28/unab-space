@@ -18,16 +18,11 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL(
-  "/hero.jpg",
-  Astro.site
-).toString();
+const resolvedImageWithDomain = new URL("/hero.jpg", Astro.site).toString();
 
 const { title } = Astro.props;
 
-const makeTitle = title
-  ? "Unabspace" + " | " + title
-  : "...";
+const makeTitle = title ? "Unabspace" + " | " + title : "...";
 ---
 
 <!DOCTYPE html>
@@ -56,7 +51,7 @@ const makeTitle = title
       }}
     />
   </head>
-  <body>
+  <body class="animate-in fade-in">
     <Navbar />
     <slot />
     <Footer />
