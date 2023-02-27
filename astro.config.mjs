@@ -3,9 +3,11 @@ import tailwind from "@astrojs/tailwind";
 import image from "@astrojs/image";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import vue from "@astrojs/vue";
 
+// https://astro.build/config
 export default defineConfig({
-  site: "https://astroship.web3templates.com",
+  site: "https://unab-space.vercel.app/",
   title: "Unabspace",
   integrations: [
     tailwind(),
@@ -14,5 +16,6 @@ export default defineConfig({
     }),
     mdx(),
     sitemap(),
+    vue(),
   ],
 });
