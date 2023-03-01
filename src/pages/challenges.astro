@@ -3,8 +3,6 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Divider from "@components/ui/divider.astro";
-import List from "@components/ui/list.vue";
-import { challenges } from "@content/listContent";
 ---
 
 <Layout title="Retos de la U">
@@ -17,26 +15,64 @@ import { challenges } from "@content/listContent";
       </Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-screen-xl mt-10 space-y-10">
+    <div class="flex flex-col gap-3 mx-auto max-w-screen-xl mt-10 space-y-5">
       <Divider />
+
       <div class="flex flex-col space-y-3">
         <h2 class="font-bold text-2xl text-gray-700 text-center">
           Obstáculos que impiden a las universidades cumplir sus misiones
         </h2>
-        <p class="text-lg leading-relaxed text-slate-600 text-justify">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
-          nostrum beatae accusantium dolorem a. Sunt tenetur iste dolores quod!
-          Sapiente!
+        <p class="text-lg leading-relaxed text-slate-600 text-center">
+          Existen dos principales factores que impiden el cumplimiento eficaz de
+          las funciones misionales de una institución educativa universitaria:
         </p>
       </div>
 
+      <div class="flex flex-wrap justify-between gap-10">
+        <div class="flex flex-wrap max-w-xl justify-center gap-2">
+          <h3 class="font-semibold text-xl text-orange-500 flex items-center">
+            Bases de comprensión
+          </h3>
+          <p class="text-lg text-slate-600 leading-relaxed text-justify">
+            La inexistencia de las bases para la comprensión. El cultivo de la
+            compresión debe darse en la familia y las universidades fortalecen
+            esas bases por medio de las humanidades y las artes.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap max-w-xl justify-center gap-2">
+          <h3 class="font-semibold text-xl text-orange-500 flex items-center">
+            Humanidades
+          </h3>
+          <p class="text-lg text-slate-600 leading-relaxed text-justify">
+            Falta de programas humanísticos y artísticos en el pensum de la
+            universidad. Sin la disponibilidad de estos programas, la educación
+            holística parece imposible de lograr.
+          </p>
+        </div>
+      </div>
+
       <Divider />
-      <div class="flex flex-col space-y-10">
+
+      <div class="flex flex-col space-y-7">
         <h2 class="font-bold text-2xl text-gray-700 text-center">
           Retos que debe emprender la universidad para cumplir su misión
         </h2>
-
-        <List arrayToDisplay={challenges} />
+        <p class="text-lg leading-relaxed text-slate-600 text-justify">
+          Para alcanzar estas metas la universidad debe emprender el fomento del
+          aprendizaje de las humanidades y las artes, para incentivar una
+          formación participativa y mejorar la capacidad de ver el mundo a
+          través de los ojos de otras personas. En la universidad se debe
+          fomentar el gusto por el arte que alimenta y extiende la capacidad de
+          empatía, fortalece los recursos emocionales e imaginativos de la
+          personalidad. El arte ayuda a desprenderse del ideal de que debemos
+          usar a otras personas para un fin propio, insta a preguntarnos por el
+          mundo interior de las otras personas y de nosotros mismos. Se debe
+          fomentar el interés por lo desconocido, ya que la experimentación de
+          lo desconocido requiere la fuerza de voluntad de dejar a un lado la
+          vergüenza y la rigidez corporal para habitar un nuevo rol, tal y como
+          lo decía Tagore.
+        </p>
       </div>
     </div>
   </Container>
